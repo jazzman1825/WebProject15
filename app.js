@@ -63,7 +63,7 @@ let text=""
     },];
  
 let productElement=""
-for (x = 0; x < productList.length; ++x) {
+for (x = 0; x < productList.length; x++) {
      productElement=productElement+`
  <div class="container">
 
@@ -83,10 +83,6 @@ for (x = 0; x < productList.length; ++x) {
 <div>
 
  <span class="productPrice"> ${productList[x].price} &#8364;</span>
-
-  <p class="orangeIcons"><i class="fas fa-user-circle"></i>${productList[x].contact}</p>
-
-  <p class="orangeIcons"><i class="fas fa-phone-alt"></i><i class="fas fa-envelope"></i></p>
                    
 </div>
 
@@ -95,6 +91,10 @@ for (x = 0; x < productList.length; ++x) {
 <span class="productPublished"> ${productList[x].date}</span>
     
 <p class="productPublished"> ${productList[x].place}</p> </p>
+
+<p class="contactInfo"></i>${productList[x].contact}</p>
+
+<button class="buyBtn">Buy</button>
     
 </div>
     </div>

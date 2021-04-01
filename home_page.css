@@ -1,3 +1,37 @@
+@media only screen and (max-width:1100px) {
+    
+    .navigation{
+        width: 100%;
+        line-height:1.2;
+    }
+    .navigation >li:nth-child(2){
+        flex: 0 0 200px;
+        margin-right: -90px;
+    }
+    .navigation >li{
+        margin: 10px;
+    }
+    .product-list >div{
+        display: flex;
+        flex-direction:column;
+
+    }
+   /* #searchInput{
+        min-width:200px;
+        max-width: 2766px;
+    }*/
+    .product-list >div{
+        height: fit-content;
+        width: 100%;
+    }
+    .otherText >button{
+        width: 100%;
+    }
+    .productPhoto{
+        border-bottom: 1px solid#4e4e4e;
+    }
+  }
+
 
 body{
     font-family: 'Arial', sans-serif;
@@ -9,6 +43,7 @@ body{
 .navigation{
      display: flex;
      flex-direction: row;
+     justify-content:space-around;
      height: 90px;
      align-items: center;
      background-color: #ec8725;
@@ -18,12 +53,28 @@ ul{
 }
 .navigation >li{
     display: inline-block; 
-    margin: 50px;
 }
+
+.navigation >li:not(:nth-child(2)){
+    flex-grow: 3; 
+    flex-shrink: 3;
+    flex-basis: 100%;
+
+}
+.navigation >li:nth-child(2){
+    flex-grow: 1; 
+    flex-shrink: 1;
+    flex-basis: 100%;
+    margin-left: 10px;
+    margin-right: 5px;
+
+}
+
 #searchInput{
-    width: 386px;
+    width: 950px;
     height: 44px;
-    border:#ffffff;
+    border:0px;
+    border-top: 3px solid #ffffff;
     border-radius: 3px;
 }
 #searchButton{
@@ -31,13 +82,12 @@ ul{
     width: auto;
     background-color: #ffffff;
     color: #ec8725;
-    border: #ffffff;
+    border: 0px;
     border-radius: 3px;
     font-size: 22px;
     font-weight: 700;
     padding-left: 30px;
     padding-right: 30px;
-    margin: -97px;
     cursor: pointer;
 }
 .navigation >li:first-child{
@@ -48,6 +98,9 @@ ul{
     color:#ffffff;
     font-size: 25px;
     font-weight: 700;
+}
+#centeredBtn{
+    text-align: center;
 }
 #sellButton{
     height: 69px;
@@ -62,8 +115,8 @@ ul{
     padding-right: 30px;
     margin: 30px;
     margin-bottom: 10px;
-    margin-left: 500px;
-    margin-right: 500px;
+    margin-left: auto;
+    margin-right: auto;
     cursor: pointer;
     
 }
@@ -84,7 +137,7 @@ ul{
     font-size: 22px;
     font-weight:400;
     border: 1px solid #ec8725;
-    border-radius: 3px;
+    border-radius: 5px;
     cursor: pointer;
   }
   
@@ -129,18 +182,36 @@ ul{
     border: 1px solid #4e4e4e;
     justify-content: space-between;
 }
+
 .productBox >div:not(:first-child){
-    margin: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.productBox >div:nth-child(2){
+   flex-grow: 1;
+   flex-shrink: 1;
+   flex-basis: 100%;
+}
+.productBox >div:not(:nth-child(2)){
+    flex-grow: 2;
+    flex-shrink: 2;
+    flex-basis: 100%;
+ }
+
+.contactInfo{
+    font-size:20px;
 }
 
-.orangeIcons{
+.buyBtn{
+    width: 140px;
+    height: 40px;
+    background-color: #ffffff;
     font-size: 22px;
-    color: #ec8725;
+    border: 1px solid #ec8725;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.fas.fa-phone-alt{
-    margin-right: 20px;
-}
 
 .productName{
     font-size: 20px;
@@ -150,12 +221,14 @@ ul{
 .productPublished{
     font-size: 16px;
     font-weight: 400;
-    color: rgba(121, 121, 121,1);
+    color: #535353;
     align-self: flex-end;
 }
 .productPhoto{
+    height: 170px;
     width: 300px;
     object-fit: cover;
+    border-right: 1px solid#4e4e4e;
 }
 
 .productPrice{
