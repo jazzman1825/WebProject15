@@ -69,32 +69,32 @@ for (x = 0; x < productList.length; x++) {
 
     <div class="product-list">
 
-    <div class="productBox">
+    <div class="product-box">
                     
-    <div><img class="productPhoto" src="Images/${productList[x].image}"/></div>
+    <div><img class="product-photo" src="Images/${productList[x].image}"/></div>
                    
-        <div class="productText">
+        <div class="product-text">
                         
-        <p class="productName">${productList[x].model}</p>
+        <p class="product-name">${productList[x].model}</p>
 
         <p>${productList[x].description}</p>
 
         </div>
 <div>
 
- <span class="productPrice"> ${productList[x].price} &#8364;</span>
+ <span class="product-price"> ${productList[x].price} &#8364;</span>
                    
 </div>
 
-<div class="otherText">
+<div class="other-text">
                             
-<span class="productPublished"> ${productList[x].date}</span>
+<span class="product-published"> ${productList[x].date}</span>
     
-<p class="productPublished"> ${productList[x].place}</p> </p>
+<p class="product-published"> ${productList[x].place}</p> </p>
 
-<p class="contactInfo"></i>${productList[x].contact}</p>
+<p class="contact-info"></i>${productList[x].contact}</p>
 
-<button class="buyBtn">Buy</button>
+<button class="buy-btn">Buy</button>
     
 </div>
     </div>
