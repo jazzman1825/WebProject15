@@ -6,7 +6,6 @@
           
     }
 
-
     .product-list >div{
         display: flex;
         flex-direction:column;
@@ -172,12 +171,12 @@ ul{
 .product-box{
     display: flex;
     flex-direction: row;
-    height: 170px;
+    height: auto;
     margin: 20px;
     margin-bottom: 0px;
     border: 1px solid #4e4e4e;
     justify-content: space-between;
-     overflow: auto;
+    
       
 }
 
