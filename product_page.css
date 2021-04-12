@@ -3,12 +3,14 @@
     .navigation{
         width: 100%;
         line-height:0.8;
-
+          
     }
-  }
 
+  }
+  
 body{
     font-family: 'Arial', sans-serif;
+    color: #333333;
     line-height: 0.4;
     margin: 0px;
 }
@@ -77,62 +79,80 @@ ul{
     font-weight: 700;
 }
 
-
-#pop-up-container{
-
-    display: flex;
-    align-items:center;
-    justify-content:center;
-}
-
-
-#Pop-up{
-    background-color: #ffffff;
-    width: 457px;
-    height: 540px;
-    text-align: center;
-    border: 1px solid #ec8725;
-    border-radius: 5px;
+.product-description-container{
     margin-top: 200px;
     margin-bottom: 400px;
-    color: #555555;
-    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-#Login-btn{
-    width: 140px;
-    height: 40px;
-    background-color: #ffffff;
-    font-size: 22px;
-    font-weight: 700;
-    border: 1px solid #ec8725;
-    border-radius: 5px;
-    cursor: pointer;
+
+.product-description{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
 
 }
-#Bazaar-name{
-    color: #ffffff;
-    text-shadow: 3px 5px 10px rgb(213 119 9);;
-    font-size: 65px;
+
+.row-directed{
+    display: flex;
+    align-self: flex-start;
+    line-height: 0.6;
+    
 }
-#sign-in{
+.product-name-description{
+    font-size: 39px;
     font-weight: 700;
+    align-self: flex-start;
 }
-.email-password{
-    clear: left;
-    border:1px solid #ec8725;
-    width: 300px;
-    height: 34px;
+
+.product-text-description{
+    font-size: 30px;
+    margin-right: 510px;
 }
-#registration{
-    margin-top: 110px;
-    font-size: 20px;
+
+.product-photo-description{
+    width: 1180px;
+    height: 465px;
+    object-fit: cover;
+    border: 1px solid #555555;
 }
-.link.forgot-password{
-    color: #555555;
+
+.product-published-description{
+    font-size: 28px;
+    font-weight: 400;
+    color: #535353;
+    align-self: flex-end;
 }
-.link.join-now{
-    color:#169BD5;
+.product-price-description{
+
+    font-family: 'Lato', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    
+
 }
+
+.contact-name-description{
+    margin-top: 100px;
+    font-weight: 600;
+}
+
+.contact-btn{
+    background-color: #ec8725;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    color: #333333;
+    font-size:17px;
+    font-weight: 400;
+    padding: 15px;
+    padding-left: 60px;
+    padding-right:60px;
+    margin-bottom: 70px;
+    cursor: pointer;
+}
+
 
 
 .footer{
@@ -144,10 +164,9 @@ ul{
     color:#ffffff;
     height: 250px;
 }
-.socialmedia-icon{
+.socialMediaIcon{
     display: flex;
     justify-content:space-between;
     width: 300px;
     font-size:35px;
 }
-
