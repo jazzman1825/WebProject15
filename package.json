@@ -1,0 +1,24 @@
+{
+  "name": "webproject15",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jazzman1825/WebProject15.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jazzman1825/WebProject15/issues"
+  },
+  "homepage": "https://github.com/jazzman1825/WebProject15#readme"
+}
