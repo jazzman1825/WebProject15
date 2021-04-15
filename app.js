@@ -61,7 +61,9 @@ let text=""
     contact: 'Lily Pad',
     place: 'Linnanmaa, Oulu',
     },];
- 
+
+ //  a loop that are creating products from the produc list above
+
 let productElement=""
 for (x = 0; x < productList.length; x++) {
      productElement=productElement+`
@@ -94,17 +96,106 @@ for (x = 0; x < productList.length; x++) {
 
 <p class="contact-info"></i>${productList[x].contact}</p>
 
-<button class="buy-btn">Buy</button>
+<button class="buy-btn" onClick="showDetailView(${productList[x].Id})">Buy</button> 
     
 </div>
     </div>
 </div>
     </div>`
 }
-let dataPage1 = document.querySelector('#dataPage1')   
+let mainPage = document.querySelector('#mainPage')   
 
-dataPage1.innerHTML=productElement
+mainPage.innerHTML=productElement
 
+//productPage 
+
+function showDetailView(productElementId) {
+    console.log(productElementId);
+   const productDetails = productList.find(productElement => productElement.Id ===  productElementId);
+
+   document.querySelector('#mainPage').style.display = "none";
+  
+
+   
+   let productPage = document.querySelector('#productPage');
+   productPage.innerHTML = ` <div class="product-description-container">
+
+   <div class="product-description">
+
+       <p class="product-name-description"></p>
+
+           <img class="product-photo-description" ${productDetails.image} "/>
+
+           <div class="row-directed">
+
+               <div class="product-text-description">
+   
+              ${productDetails.description} 
+
+   
+                   <p class="contact-name-description">Contact: John Smith</p>
+   
+                   <button class="contact-btn">Show contact </button>
+   
+               </div>
+   
+               <div>
+   
+                    <p class="product-price-description">  ${productDetails.price}  &#8364;</p>
+                       
+                    <p class="product-published-description">  ${productDetails.date}</p>
+   
+                    <p class="product-published-description"> ${productDetails.place} </p>
+               
+               </div>
+   
+           </div>
+           
+
+   </div>    
+
+</div>`;
+
+   
+   }
+
+
+//PopUp 
+// let popUpElements=""
+// for (x = 0; x < 1; x++) {
+//     popUpElements += `
+//     <div id="Pop-up">
+
+//     <h1 id="Bazaar-name">Bazaar</h1>
+
+//     <p id="sign-in">Sign in</p>
+
+//     <p>Email or phone number</p>
+
+//     <input class="email-password">
+
+//     <p>Password</p>
+
+//     <input  class="email-password">
+
+//     <p><a href="#" class="link forgot-password"> I forgot my password</a></p>
+
+//     <button id="Login-btn">Log in</button>
+
+//     <p id="registration"><span>New to Bazaar? </span><span><a href="#" class="link join-now"> Join now</a></span></p>
+
+// </div>`
+// }
+
+// let popUp = document.querySelector('#Pop-up')
+// popUp.innerHTML=popUpElements
  
 
+// function openForm() {
+//     document.getElementById("Pop-up").style.display = "block";
+//   }
+  
+//   function closeForm() {
+//     document.getElementById("Pop-up").style.display = "none";
+//   }
 
