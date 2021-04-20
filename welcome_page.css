@@ -71,6 +71,11 @@ ul{
     padding-right: 30px;
     cursor: pointer;
 }
+.navigation >li >a{
+    color:#ffffff;
+    text-decoration: none;
+}
+
 
 .login-icon{
     color:#ffffff;
@@ -83,6 +88,11 @@ ul{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.welcome-btns >a{
+    color: #ec8725;
+    text-decoration: none;
 }
 
 .welcome-btns{

@@ -96,7 +96,7 @@ for (x = 0; x < productList.length; x++) {
 
 <p class="contact-info"></i>${productList[x].contact}</p>
 
-<button class="buy-btn" onClick="showDetailView(${productList[x].Id})">Buy</button> 
+<button class="buy-btn"> <a href="product_page.html">Buy</a></button> 
     
 </div>
     </div>

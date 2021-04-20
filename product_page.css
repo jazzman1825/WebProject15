@@ -73,6 +73,12 @@ ul{
     cursor: pointer;
 }
 
+.navigation >li >a{
+    color:#ffffff;
+    text-decoration: none;
+}
+
+
 .login-icon{
     color:#ffffff;
     font-size: 25px;
