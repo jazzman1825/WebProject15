@@ -62,7 +62,6 @@
     },
 ];
 
- 
 
 function showDetailView(productElementId) {
     console.log(productElementId);
