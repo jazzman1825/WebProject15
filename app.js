@@ -1,5 +1,4 @@
-let text=""
-     
+
  const productList = [
 {
     model: 'Diamond mattress',
@@ -60,54 +59,10 @@ let text=""
     date: '20/03/2020',
     contact: 'Lily Pad',
     place: 'Linnanmaa, Oulu',
-    },];
+    },
+];
 
- //  a loop that are creating products from the produc list above
-
-let productElement=""
-for (x = 0; x < productList.length; x++) {
-     productElement=productElement+`
- <div class="container">
-
-    <div class="product-list">
-
-    <div class="product-box">
-                    
-    <div><img class="product-photo" src="Images/${productList[x].image}"/></div>
-                   
-        <div class="product-text">
-                        
-        <p class="product-name">${productList[x].model}</p>
-
-        <p>${productList[x].description}</p>
-
-        </div>
-<div>
-
- <span class="product-price"> ${productList[x].price} &#8364;</span>
-                   
-</div>
-
-<div class="other-text">
-                            
-<span class="product-published"> ${productList[x].date}</span>
-    
-<p class="product-published"> ${productList[x].place}</p> </p>
-
-<p class="contact-info"></i>${productList[x].contact}</p>
-
-<button class="buy-btn"> <a href="product_page.html">Buy</a></button> 
-    
-</div>
-    </div>
-</div>
-    </div>`
-}
-let mainPage = document.querySelector('#mainPage')   
-
-mainPage.innerHTML=productElement
-
-//productPage 
+ 
 
 function showDetailView(productElementId) {
     console.log(productElementId);
@@ -159,43 +114,54 @@ function showDetailView(productElementId) {
    
    }
 
+function createHomePage() {
+    //  I've taken all the code from main part to this function. When this function is called, the general page with products
+    //  is going to be drawn on the website (Danila)
+let productElement=""
 
-//PopUp 
-// let popUpElements=""
-// for (x = 0; x < 1; x++) {
-//     popUpElements += `
-//     <div id="Pop-up">
+for (x = 0; x < productList.length; x++) {
+     productElement=productElement+`
+ <div class="container">
 
-//     <h1 id="Bazaar-name">Bazaar</h1>
+    <div class="product-list">
 
-//     <p id="sign-in">Sign in</p>
+    <div class="product-box">
+                    
+    <div><img class="product-photo" src="Images/${productList[x].image}"/></div>
+                   
+        <div class="product-text">
+                        
+        <p class="product-name">${productList[x].model}</p>
 
-//     <p>Email or phone number</p>
+        <p>${productList[x].description}</p>
 
-//     <input class="email-password">
+        </div>
+<div>
 
-//     <p>Password</p>
+ <span class="product-price"> ${productList[x].price} &#8364;</span>
+                   
+</div>
 
-//     <input  class="email-password">
+<div class="other-text">
+                            
+<span class="product-published"> ${productList[x].date}</span>
+    
+<p class="product-published"> ${productList[x].place}</p> </p>
 
-//     <p><a href="#" class="link forgot-password"> I forgot my password</a></p>
+<p class="contact-info"></i>${productList[x].contact}</p>
 
-//     <button id="Login-btn">Log in</button>
+<button class="buy-btn"> <a href="product_page.html">Buy</a></button> 
+    
+</div>
+    </div>
+</div>
+    </div>`
+}
 
-//     <p id="registration"><span>New to Bazaar? </span><span><a href="#" class="link join-now"> Join now</a></span></p>
+let mainPage = document.querySelector('#mainPage')   
 
-// </div>`
-// }
+mainPage.innerHTML=productElement
 
-// let popUp = document.querySelector('#Pop-up')
-// popUp.innerHTML=popUpElements
- 
+//productPage (WTF does it mean?)
 
-// function openForm() {
-//     document.getElementById("Pop-up").style.display = "block";
-//   }
-  
-//   function closeForm() {
-//     document.getElementById("Pop-up").style.display = "none";
-//   }
-
+}
