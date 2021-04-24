@@ -62,19 +62,71 @@
     },
 ];
 
+function createHomePage() {
+    //  I've taken all the code from main part to this function. When this function is called, the general page with products
+    //  is going to be drawn on the website (Danila)
+let productElement=""
 
-function showDetailView(productElementId) {
+for (x = 0; x < productList.length; x++) {
+     productElement=productElement+`
+ <div class="container">
+
+    <div class="product-list">
+
+    <div class="product-box">
+                    
+    <div><img class="product-photo" src="Images/${productList[x].image}"/></div>
+                   
+        <div class="produt-text">
+                        
+        <p class="product-name">${productList[x].model}</p>
+
+        <p>${productList[x].description}</p>
+
+        </div>
+<div>
+
+ <span class="product-price"> ${productList[x].price} &#8364;</span>
+                   
+</div>
+
+<div class="other-text">
+                            
+<span class="product-published"> ${productList[x].date}</span>
+    
+<p class="product-published"> ${productList[x].place}</p> </p>
+
+<p class="contact-info"></i>${productList[x].contact}</p>
+
+<button class="buy-btn"> <a href="product_page.html">Buy</a></button>
+    
+</div>
+    </div>
+</div>
+    </div>`
+}
+
+let mainPage = document.querySelector('#mainPage')   
+
+mainPage.innerHTML=productElement
+
+//productPage (WTF does it mean?)
+
+}
+
+function createProductPage(productElementId) {
+
     console.log(productElementId);
-   const productDetails = productList.find(productElement => productElement.Id ===  productElementId);
+    const productDetails = productList.find(productElement => productElement.Id ===  productElementId);
 
-   document.querySelector('#mainPage').style.display = "none";
+    document.querySelector('#mainPage').style.display = "none";
   
 
    
-   let productPage = document.querySelector('#productPage');
-   productPage.innerHTML = ` <div class="product-description-container">
+    let productPage = document.querySelector('#productPage');
+    productPage.innerHTML = ` <div class="product-description-container">
 
-   <div class="product-description">
+    <div class="product-description">
 
        <p class="product-name-description"></p>
 
@@ -106,61 +158,16 @@ function showDetailView(productElementId) {
            </div>
            
 
-   </div>    
+    </div>    
 
 </div>`;
 
    
    }
 
-function createHomePage() {
-    //  I've taken all the code from main part to this function. When this function is called, the general page with products
-    //  is going to be drawn on the website (Danila)
-let productElement=""
-
-for (x = 0; x < productList.length; x++) {
-     productElement=productElement+`
- <div class="container">
-
-    <div class="product-list">
-
-    <div class="product-box">
-                    
-    <div><img class="product-photo" src="Images/${productList[x].image}"/></div>
-                   
-        <div class="product-text">
-                        
-        <p class="product-name">${productList[x].model}</p>
-
-        <p>${productList[x].description}</p>
-
-        </div>
-<div>
-
- <span class="product-price"> ${productList[x].price} &#8364;</span>
-                   
-</div>
-
-<div class="other-text">
-                            
-<span class="product-published"> ${productList[x].date}</span>
-    
-<p class="product-published"> ${productList[x].place}</p> </p>
-
-<p class="contact-info"></i>${productList[x].contact}</p>
-
-<button class="buy-btn"> <a href="product_page.html">Buy</a></button> 
-    
-</div>
-    </div>
-</div>
-    </div>`
-}
-
-let mainPage = document.querySelector('#mainPage')   
-
-mainPage.innerHTML=productElement
-
-//productPage (WTF does it mean?)
+function passId(key) {
+    // This function passes the id of the product from the home page
+    // to the blank page of the product
+    // in order to draw the exact product fronm the array.
 
 }
