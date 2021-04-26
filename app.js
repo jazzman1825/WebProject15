@@ -1,5 +1,10 @@
-const { ADDRGETNETWORKPARAMS } = require("node:dns");
+var array = [];
 
-function test(arg) {
-    console.log(arg)
+
+fetch('http://localhost:3000/users')
+.then(response => response.json())
+.then(data => console.log(data));
+
+function showdata() {
+    console.log(array(0))
 }
