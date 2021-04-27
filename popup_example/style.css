@@ -1,0 +1,55 @@
+#pop-up-container{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+
+#Pop-up{
+    background-color: #ffffff;
+    width: 457px;
+    height: 540px;
+    text-align: center;
+    border: 1px solid #ec8725;
+    border-radius: 5px;
+    margin-top: 200px;
+    margin-bottom: 400px;
+    color: #555555;
+    font-size: 22px;
+}
+#Login-btn{
+    width: 140px;
+    height: 40px;
+    background-color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    border: 1px solid #ec8725;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+#Bazaar-name{
+    color: #ffffff;
+    text-shadow: 3px 5px 10px rgb(213 119 9);;
+    font-size: 65px;
+}
+#sign-in{
+    font-weight: 700;
+}
+.email-password{
+    clear: left;
+    border:1px solid #ec8725;
+    width: 300px;
+    height: 34px;
+}
+#registration{
+    margin-top: 110px;
+    font-size: 20px;
+}
+.link.forgot-password{
+    color: #555555;
+}
+.link.join-now{
+    color:#169BD5;
+}
+
