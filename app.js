@@ -137,7 +137,7 @@ function createProductPage(productElementId) {
               ${productDetails.description} 
 
    
-                   <p class="contact-name-description">Contact: John Smith</p>
+                   <p class="contact-name-description">Contact: ${productDetails.contact}</p>
    
                    <button class="contact-btn">Show contact </button>
    
