@@ -69,11 +69,11 @@ let productElement=""
 
 for (x = 0; x < productList.length; x++) {
      productElement=productElement+`
- <div class="container">
+ <div class="container" >
 
     <div class="product-list">
 
-    <div class="product-box">
+    <div class="product-box" onClick= "createProductPage(${productList[x].Id})">
                     
     <div><img class="product-photo" src="Images/${productList[x].image}"/></div>
                    
@@ -98,7 +98,7 @@ for (x = 0; x < productList.length; x++) {
 
 <p class="contact-info"></i>${productList[x].contact}</p>
 
-<button class="buy-btn"> <a href="product_page.html">Buy</a></button>
+<button class="buy-btn"> Buy</a></button>
     
 </div>
     </div>
@@ -109,14 +109,12 @@ for (x = 0; x < productList.length; x++) {
 let mainPage = document.querySelector('#mainPage')   
 
 mainPage.innerHTML=productElement
-
-//productPage (WTF does it mean?)
-
 }
 
+
+//product page 
 function createProductPage(productElementId) {
 
-    console.log(productElementId);
     const productDetails = productList.find(productElement => productElement.Id ===  productElementId);
 
     document.querySelector('#mainPage').style.display = "none";
@@ -130,7 +128,7 @@ function createProductPage(productElementId) {
 
        <p class="product-name-description"></p>
 
-           <img class="product-photo-description" ${productDetails.image} "/>
+           <img class="product-photo-description" src="Images/${productDetails.image}"/>
 
            <div class="row-directed">
 
