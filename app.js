@@ -131,7 +131,7 @@ function createProductPage(id) {
    
                    <p class="contact-name-description">Contact: ${productList[id].contact}</p>
    
-                   <button class="contact-btn">Show contact </button>
+                   <button class="contact-btn" onclick="showContacts('8 (981) 106-20-83');">Show contact</button>
    
                </div>
    
@@ -160,4 +160,9 @@ function passKey(value) {
     // to the blank page of the product
     // in order to draw the exact product fronm the array.
     sessionStorage.setItem('key', value);
+};
+
+function showContacts(text) {
+    let buttonText = document.querySelector('.contact-btn');
+    buttonText.innerHTML = `${text}`
 };
