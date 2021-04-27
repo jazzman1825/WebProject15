@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    
     <!DOCTYPE html>
+    
 <html>
 
     <head>
@@ -34,53 +38,7 @@
             </ul>
         </nav>
 
-        <div class="product-description-container">
-
-            <div class="product-description">
-
-                <p class="product-name-description">Diamond mattress</p>
-    
-                    <img class="product-photo-description" src="/Images/1.jpg"/>
-
-                    <div class="row-directed">
-
-                        <div class="product-text-description">
-            
-                            <p>Less than a year old mattress</p>
-            
-                            <p> In good condition, intact and clean</p>
-            
-                            <p>Great quality, it was just too thick for us.</p> 
-            
-                            <p>Length 200 cm</p>
-            
-                            <p>Width 80 cm</p>
-            
-                            <p>Height 18 cm</p>
-            
-                            <p class="contact-name-description">Contact: John Smith</p>
-            
-                            <button class="contact-btn">Show contact</button>
-            
-                        </div>
-            
-                        <div>
-            
-                             <p class="product-price-description"> 30 &#8364;</p>
-                                
-                             <p class="product-published-description">  20/03/2020 </p>
-            
-                             <p class="product-published-description"> Tuira, Oulu </p>
-                        
-                        </div>
-            
-                    </div>
-                    
-    
-            </div>    
-
-        </div>
-       
+        <div id="mainPage"></div>
 
         <div class="footer">
 
@@ -93,6 +51,8 @@
             <p>&#169; Finland</p>
 
     </div>
+    <script src="app.js"></script>
+    <script>createProductPage(sessionStorage.getItem('key'));</script>
 
 </body>
 

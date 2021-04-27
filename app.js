@@ -4,7 +4,7 @@
     model: 'Diamond mattress',
     image: '1.jpg',
     price:'30',
-    Id: 1,
+    Id: 0,
     description:'<p>Less than a year old mattress</p><p> In good condition, intact and clean</p><p>Great quality, it was just too thick for us.</p> <p>Length 200 cm</p><p>Width 80 cm</p><p>Height 18 cm</p>',
     date: '20/03/2020',
     contact: 'Linda Henkinen',
@@ -14,7 +14,7 @@
     model: 'Mirror',
     price: '100',
     image: '2.jpg',
-    Id: 2,
+    Id: 1,
     description:'<p>Nice and big mirror in the wooden frame</p><p> Length 100 cm</p><p>Height 180 cm</p>', 
     date: '20/03/2020',
     contact: 'Lily Pad',
@@ -24,7 +24,7 @@
     model: 'Diamond mattress',
     image: '1.jpg',
     price:'30',
-    Id: 3,
+    Id: 2,
     description:'<p>Less than a year old mattress</p><p> In good condition, intact and clean</p><p>Great quality, it was just too thick for us.</p> <p>Length 200 cm</p><p>Width 80 cm</p><p>Height 18 cm</p>',
     date: '20/03/2020',
     contact: 'Linda Henkinen',
@@ -34,7 +34,7 @@
     model: 'Mirror',
     image: '2.jpg',
     price: '100',
-    Id: 4,
+    Id: 3,
     description:'<p>Nice and big mirror in the wooden frame</p><p> Length 100 cm</p><p>Height 180 cm</p>', 
     date: '20/03/2020',
     contact: 'Lily Pad',
@@ -44,7 +44,7 @@
     model: 'Diamond mattress',
     image: '1.jpg',
     price:'30',
-    Id: 5,
+    Id: 4,
     description:'<p>Less than a year old mattress</p><p> In good condition, intact and clean</p><p>Great quality, it was just too thick for us.</p> <p>Length 200 cm</p><p>Width 80 cm</p><p>Height 18 cm</p>',
     date: '20/03/2020',
     contact: 'Linda Henkinen',
@@ -54,7 +54,7 @@
     model: 'Mirror',
     image: '2.jpg',
     price: '100',
-    Id: 6,
+    Id: 5,
     description:'<p>Nice and big mirror in the wooden frame</p><p> Length 100 cm</p><p>Height 180 cm</p>', 
     date: '20/03/2020',
     contact: 'Lily Pad',
@@ -73,7 +73,7 @@ for (x = 0; x < productList.length; x++) {
 
     <div class="product-list">
 
-    <div class="product-box" onClick= "createProductPage(${productList[x].Id})">
+    <div class="product-box">
                     
     <div><img class="product-photo" src="Images/${productList[x].image}"/></div>
                    
@@ -98,7 +98,7 @@ for (x = 0; x < productList.length; x++) {
 
 <p class="contact-info"></i>${productList[x].contact}</p>
 
-<button class="buy-btn"> Buy</a></button>
+<button class="buy-btn" onclick="passKey(${x});"><a href="product_page.html"> Buy</a></button>
     
 </div>
     </div>
@@ -111,33 +111,25 @@ let mainPage = document.querySelector('#mainPage')
 mainPage.innerHTML=productElement
 }
 
-
-//product page 
-function createProductPage(productElementId) {
-
-    const productDetails = productList.find(productElement => productElement.Id ===  productElementId);
-
-    document.querySelector('#mainPage').style.display = "none";
-  
-
+function createProductPage(id) {
    
-    let productPage = document.querySelector('#productPage');
-    productPage.innerHTML = ` <div class="product-description-container">
+    let mainPage = document.querySelector('#mainPage');
+    mainPage.innerHTML = ` <div class="product-description-container">
 
     <div class="product-description">
 
        <p class="product-name-description"></p>
 
-           <img class="product-photo-description" src="Images/${productDetails.image}"/>
+           <img class="product-photo-description" src="Images/${productList[id].image}"/>
 
            <div class="row-directed">
 
                <div class="product-text-description">
    
-              ${productDetails.description} 
+              ${productList[id].description} 
 
    
-                   <p class="contact-name-description">Contact: ${productDetails.contact}</p>
+                   <p class="contact-name-description">Contact: ${productList[id].contact}</p>
    
                    <button class="contact-btn">Show contact </button>
    
@@ -145,11 +137,11 @@ function createProductPage(productElementId) {
    
                <div>
    
-                    <p class="product-price-description">  ${productDetails.price}  &#8364;</p>
+                    <p class="product-price-description">  ${productList[id].price}  &#8364;</p>
                        
-                    <p class="product-published-description">  ${productDetails.date}</p>
+                    <p class="product-published-description">  ${productList[id].date}</p>
    
-                    <p class="product-published-description"> ${productDetails.place} </p>
+                    <p class="product-published-description"> ${productList[id].place} </p>
                
                </div>
    
@@ -163,9 +155,9 @@ function createProductPage(productElementId) {
    
    }
 
-function passId(key) {
+function passKey(value) {
     // This function passes the id of the product from the home page
     // to the blank page of the product
     // in order to draw the exact product fronm the array.
-
-}
+    sessionStorage.setItem('key', value);
+};
