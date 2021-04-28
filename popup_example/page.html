@@ -1,33 +1,44 @@
 <html>
     <head>
+        <script src="https://kit.fontawesome.com/ad71ca8aee.js" crossorigin="anonymous"></script>
+        
         <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
-        <div id="pop-up-container">
+        <div id="pop-up-shadow">
 
-            <div id="Pop-up">
+            <div id="pop-up-container">
 
-                <h1 id="Bazaar-name">Bazaar</h1>
-    
-                <p id="sign-in">Sign in</p>
-    
-                <p>Email or phone number</p>
-    
-                <input class="email-password">
-    
-                <p>Password</p>
-    
-                <input  class="email-password">
-    
-                <p><a href="#" class="link forgot-password"> I forgot my password</a></p>
-    
-                <button id="Login-btn">Log in</button>
-    
-                <p id="registration"><span>New to Bazaar? </span><span><a href="#" class="link join-now"> Join now</a></span></p>
-           
-            </div>
-        <button onclick="PopUpShow()">Show popup</button>
+                <div id="Pop-up">
+                    
+                    <div onclick="PopUpHide()" id="close-btn"><i class="fas fa-times"></i></div>
+
+                    <div id="Bazaar-name">Bazaar</div>
+        
+                    <p id="sign-in">Sign in</p>
+        
+                    <p>Email or phone number</p>
+        
+                    <input class="email-password">
+        
+                    <p>Password</p>
+        
+                    <input  class="email-password">
+        
+                    <p><a href="#" class="link forgot-password"> I forgot my password</a></p>
+        
+                    <button id="Login-btn">Log in</button>
+        
+                    <p id="registration"><span>New to Bazaar? </span><span><a href="#" class="link join-now"> Join now</a></span></p>
+               
+                </div>
+                
         </div>
+       
+        </div>
+        
+        <button onclick="PopUpShow()">Show popup</button>
+
     </body>
     <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
     <script src="script.js"></script>

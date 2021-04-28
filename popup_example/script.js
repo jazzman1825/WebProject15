@@ -4,9 +4,9 @@ $(document).ready(function(){
 });
 
 function PopUpShow(){
-    $("#Pop-up").show();
+    $("#pop-up-shadow").show();
 }
 
 function PopUpHide(){
-    $("#Pop-up").hide();
+    $("#pop-up-shadow").hide();
 }
