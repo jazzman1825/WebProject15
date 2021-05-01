@@ -291,6 +291,12 @@ ul{
     margin-right: 510px;
 }
 
+.product-text {
+    width: 700px;
+    word-wrap: break-word; 
+    line-height: 1.2;
+}
+
 .product-photo-description{
     width: 1180px;
     height: 465px;
