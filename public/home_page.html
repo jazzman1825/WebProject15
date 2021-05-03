@@ -1,0 +1,110 @@
+<html>
+<!DOCTYPE html>
+<html>
+
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+
+<head>
+
+    <script src="https://kit.fontawesome.com/ad71ca8aee.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="home_page.css" />
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <div class="navigation">
+
+                <li><a href="welcome_page.html">Bazaar</a></li>
+
+                <li>
+
+                    <label for="search"></label>
+
+                    <input id="search-input" type="search" id="search" name="search" placeholder="I'm searching for...">
+
+                    <button id="search-button">Search </button>
+                </li>
+
+                <li class="login-icon"><a href="logIn_page.html"><i class="fas fa-user-circle"></i>  Log in</a></li>
+
+            </div>
+        </ul>
+    </nav>
+
+    <div id="centered-btn">
+
+        <button id="sell-button">Sell something <i class="fas fa-shopping-bag"></i></button>
+
+    </div>
+
+    <div class="drop-flex">
+
+        <div class="dropdown">
+
+            <button class="drop-btn">Categories <i class="fas fa-chevron-down"></i> </button>
+
+            <div class="dropdown-content">
+
+                <a href="#">Kitchen</a>
+
+                <a href="#">Bedroom</a>
+
+                <a href="#">Bathroom</a>
+
+                <a href="#">Living room</a>
+
+                <a href="#">Hobby</a>
+
+            </div>
+
+        </div>
+
+        <div class="dropdown">
+
+            <button class="drop-btn">Sort by <i class="fas fa-chevron-down"></i> </button>
+
+            <div class="dropdown-content">
+
+                <a href="#">Price decreasing </a>
+
+                <a href="#">Price increasing </a>
+
+                <a href="#">Newest</a>
+
+                <a href="#">Oldest </a>
+
+                <a href="#">Featured</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="mainPage"></div>
+
+    <div id="productPage"></div>
+
+    <div class="footer">
+
+        <h1 class="footer-text">Bazaar</h1>
+
+        <p class="footer-text"><span>Privacy</span><span>  Contact Us</span></p>
+
+        <p class="socialmedia-icon"><i class="fab fa-facebook-square"></i> <i class="fab fa-instagram"></i> <i class="fab fa-twitter"></i> <i class="fab fa-youtube"></i></p>
+
+        <p>&#169; Finland</p>
+
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        createHomePage();
+    </script>
+
+</body>
+
+</html>
