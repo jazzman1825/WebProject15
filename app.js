@@ -1,65 +1,3 @@
-// const productList = [
-//     {
-//         model: 'Diamond mattress',
-//         image: '1.jpg',
-//         price:'30',
-//         id: 0,
-//         description:'Less than a year old mattress In good condition, intact and clean Great quality, it was just too thick for us. Length 200 cm Width 80 cm Height 18 cm',
-//         date: '20/03/2020',
-//         contact: 'Linda Henkinen',
-//         place: 'Tuira, Oulu',
-//         },
-//     {
-//         model: 'Mirror',
-//         price: '100',
-//         image: '2.jpg',
-//         id: 1,
-//         description:'Nice and big mirror in the wooden frame Length 100 cmHeight 180 cm', 
-//         date: '20/03/2020',
-//         contact: 'Lily Pad',
-//         place: 'Linnanmaa, Oulu',
-//         },
-//     {    
-//         model: 'Diamond mattress',
-//         image: '1.jpg',
-//         price:'30',
-//         id: 2,
-//         description:'Less than a year old mattress In good condition, intact and cleanGreat quality, it was just too thick for us. Length 200 cmWidth 80 cmHeight 18 cm',
-//         date: '20/03/2020',
-//         contact: 'Linda Henkinen',
-//         place: 'Tuira, Oulu',
-//     },
-//     {
-//         model: 'Mirror',
-//         image: '2.jpg',
-//         price: '100',
-//         id: 3,
-//         description:'Nice and big mirror in the wooden frame Length 100 cmHeight 180 cm', 
-//         date: '20/03/2020',
-//         contact: 'Lily Pad',
-//         place: 'Linnanmaa, Oulu',
-//         },
-//     {
-//         model: 'Diamond mattress',
-//         image: '1.jpg',
-//         price:'30',
-//         id: 4,
-//         description:'Less than a year old mattress In good condition, intact and cleanGreat quality, it was just too thick for us. Length 200 cmWidth 80 cmHeight 18 cm',
-//         date: '20/03/2020',
-//         contact: 'Linda Henkinen',
-//         place: 'Tuira, Oulu',
-//         },
-//     {
-//         model: 'Mirror',
-//         image: '2.jpg',
-//         price: '100',
-//         id: 5,
-//         description:'Nice and big mirror in the wooden frame Length 100 cmHeight 180 cm', 
-//         date: '20/03/2020',
-//         contact: 'Lily Pad',
-//         place: 'Linnanmaa, Oulu',
-//         },
-// ];
 
 async function getProductDetails() 
 {
@@ -98,9 +36,9 @@ function createHomePage() {
                        
             <div>
                             
-            <p class="product-name">${productList[x].model}
+            <p class="product-name">${productList[x].model}</p>
     
-            <p class ="product-text">${productList[x].description}
+            <p class ="product-text">${productList[x].description}</p>
     
             </div>
     <div>
@@ -113,9 +51,9 @@ function createHomePage() {
                                 
     <span class="product-published"> ${productList[x].date}</span>
         
-    <p class="product-published"> ${productList[x].place} 
+    <p class="product-published"> ${productList[x].place}</p>
     
-    <p class="contact-info"></i>${productList[x].contact}
+    <p class="contact-info"></i>${productList[x].contact}</p>
     
     <button class="buy-btn" onclick="passKey(${x});"><a href="product_page.html"> Buy</a></button>
         
@@ -129,7 +67,7 @@ function createHomePage() {
     
     mainPage.innerHTML=productElement
      })()
-}
+};
 
 function createProductPage(id) {
     (async () => {
@@ -151,7 +89,7 @@ function createProductPage(id) {
                   ${productList[id].description} 
     
        
-                       <p class="contact-name-description">Contact: ${productList[id].contact}
+                       <p class="contact-name-description">Contact: ${productList[id].contact} </p>
        
                        <button class="contact-btn" onclick="showContacts('8 (981) 106-20-83');">Show contact</button>
        
@@ -159,24 +97,22 @@ function createProductPage(id) {
        
                    <div>
        
-                        <p class="product-price-description">  ${productList[id].price}  &#8364;
+                        <p class="product-price-description">  ${productList[id].price}  &#8364; </p>
                            
-                        <p class="product-published-description">  ${productList[id].date}
+                        <p class="product-published-description">  ${productList[id].date} </p>
        
-                        <p class="product-published-description"> ${productList[id].place} 
+                        <p class="product-published-description"> ${productList[id].place} </p>
                    
                    </div>
        
                </div>
                
     
-        </div>    
-    
-    </div>`;
+        </div>  `;
     
        
      })()
-   }
+   };
 
 function passKey(value) {
     // This function passes the id of the product from the home page
