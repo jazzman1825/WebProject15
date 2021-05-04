@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    
+    <!DOCTYPE html>
+    
+<html>
+
+    <head>
+
+        <script src="https://kit.fontawesome.com/ad71ca8aee.js" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="product_page.css"/>
+
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <div class="navigation">
+
+                    <li><a href="welcome_page.html">Bazaar</a></li>
+
+                    <li>
+
+                        <label for="search"></label>
+
+                        <input id="search-input" type="search" id="search" name="search" placeholder="I'm searching for...">
+
+                        <button id="search-button">Search </button>
+                    </li>
+
+                    <li class="login-icon"><a href="logIn_page.html"><i class="fas fa-user-circle"></i>  Log in</a></li>
+
+                </div>
+            </ul>
+        </nav>
+
+        <div id="mainPage"></div>
+
+        <div class="footer">
+
+            <h1 class="footerText">Bazaar</h1>
+
+            <p class="footerText"><span>Privacy</span><span>  Contact Us</span></p>
+
+            <p class="socialMediaIcon"><i class="fab fa-facebook-square"></i>  <i class="fab fa-instagram"></i> <i class="fab fa-twitter"></i>  <i class="fab fa-youtube"></i></p>
+
+            <p>&#169; Finland</p>
+
+    </div>
+    <script src="app.js"></script>
+    <script>createProductPage(sessionStorage.getItem('key'));</script>
+
+</body>
+
+</html>
